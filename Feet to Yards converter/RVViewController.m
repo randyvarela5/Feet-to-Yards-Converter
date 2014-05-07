@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    float footToYard = 0.333333;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +29,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)convertButtonPressed:(UIButton *)sender {
+    float numberOfFeet =[self.feetEnteredText.text floatValue];
+    float convertedYards = numberOfFeet * 0.33333;
+    self.convertedYardsLabel.text =[NSString stringWithFormat:@"%f", convertedYards];
+    [self.feetEnteredText resignFirstResponder];
+    
+    
+}
 @end

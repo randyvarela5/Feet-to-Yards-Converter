@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface RVViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *convertedYardsLabel;
+@property (strong, nonatomic) IBOutlet UITextField *feetEnteredText;
+
+
+- (IBAction)convertButtonPressed:(UIButton *)sender;
 
 @end
